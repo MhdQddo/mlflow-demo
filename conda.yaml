@@ -1,0 +1,9 @@
+name: mq_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - scikit-learn
+  - pip
+  - pip:
+      - mlflow
