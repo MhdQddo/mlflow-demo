@@ -13,7 +13,7 @@ os.environ['MLFLOW_TRACKING_PASSWORD'] = "admin0123456789"
 
 mlflow.set_tracking_uri("http://localhost:5000")
 
-# Enable autologging for all supported libraries
+# Enable autologging for all supported libraries 
 mlflow.sklearn.autolog()
 
 # Load dataset
