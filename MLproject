@@ -8,3 +8,8 @@ entry_points:
       n_estimators: {type: int, default: 100}
       max_depth: {type: int, default: 5}
     command: "python train.py {n_estimators} {max_depth}"
+  gridsearch:
+    parameters:
+      cv_folds: {type: int, default: 5}
+      scoring: {type: str, default: "neg_mean_squared_error"}
+    command: "python gridsearch-example.py"

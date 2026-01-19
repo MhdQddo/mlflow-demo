@@ -10,9 +10,10 @@ import os
 # This is the new Code!
 
 os.environ['MLFLOW_TRACKING_USERNAME'] = "admin"
-os.environ['MLFLOW_TRACKING_PASSWORD'] = "admin0123456789"
+os.environ['MLFLOW_TRACKING_PASSWORD'] = "123456789admin"
 
 mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_experiment('remote-run-exp')
 
 # Enable autologging for all supported libraries 
 mlflow.sklearn.autolog()
