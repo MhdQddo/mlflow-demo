@@ -5,12 +5,8 @@ from sklearn.datasets import load_diabetes
 from sklearn.ensemble import RandomForestRegressor
 import mlflow
 import random
-import os
 
 # This is the new Code!
-
-os.environ['MLFLOW_TRACKING_USERNAME'] = "admin"
-os.environ['MLFLOW_TRACKING_PASSWORD'] = "123456789admin"
 
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment('remote-run-exp')
