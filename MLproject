@@ -7,9 +7,16 @@ entry_points:
     parameters:
       n_estimators: {type: int, default: 100}
       max_depth: {type: int, default: 5}
-    command: "python train.py {n_estimators} {max_depth}"
+      max_features: {type: int, default: 5}
+    command: "python train.py --n_estimators {n_estimators} --max_depth {max_depth} --max_features {max_features}"
   gridsearch:
     parameters:
       cv_folds: {type: int, default: 5}
       scoring: {type: str, default: "neg_mean_squared_error"}
     command: "python gridsearch-example.py"
+  test1:
+    parameters:
+      n_estimators: {type: int, default: 66}
+      max_depth: {type: int, default: 6}
+      max_features: {type: int, default: 6}
+    command: "python tests/test1.py --n_estimators {n_estimators} --max_depth {max_depth} --max_features {max_features}"
